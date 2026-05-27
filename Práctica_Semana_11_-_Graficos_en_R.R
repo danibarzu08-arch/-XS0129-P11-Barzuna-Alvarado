@@ -152,10 +152,15 @@ summary(mtcars)
 # Interprete: en que mes se observa la mayor temperatura mediana.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+boxplot(Temp ~Month,
+data = airquality,
+main = "Temperatura por mes",
+xalb = "Mes",
+ylab = "temperatura",
+col = "#cb50e3")
 
 
-
-# Comentario 1.3: ______________________________________________________________
+# Comentario 1.3: La mayor temperatura se observa en el mes 8.
 
 
 
