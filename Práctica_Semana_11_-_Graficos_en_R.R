@@ -440,14 +440,25 @@ main = "Mapa de Japon")
 # usando el paquete base o ggplot2. Luego responda en comentarios:
 #
 #   a) Que diferencias noto en la cantidad y claridad del codigo:
-#      _________________________________________________________________________
+#      Note que el codigo con ggthemes nos permite personalizar la apariencia de los graficos mas facilmente, 
+#      en cambio con ggplot2 debemos dar mas configuraciones manuales para obtener un resultado similar.
 #   b) En que situacion recomendaria usar la libreria investigada y en cual
 #      preferiria el paquete base o ggplot2:
-#      _________________________________________________________________________
+#      Yo recomendaria usar ggthemes cuando es necesario mejorar la apariencia de los graficos rapidamente,
+#      mientras que recomendaria ggplot2 en graficos con mas capas o personalizaciones especificas.
 
 # >>> ESCRIBA AQUI EL GRAFICO EQUIVALENTE CON BASE O ggplot2:
+ggplot(airquality,
+aes(x = Temp, 
+y = Ozone, 
+color = factor(Month))) + 
 
+geom_point() +
 
+labs(title = "Temperatura y Ozono",
+x = "Temperatura",
+y = "Ozono")
+#Vemos que el grafico de ggplot2 resulta ser mas sencillo y perzonalizable.
 
 # ==============================================================================
 # PARTE 5 - TRABAJO COLABORATIVO CON GIT Y GITHUB  (15 puntos)
