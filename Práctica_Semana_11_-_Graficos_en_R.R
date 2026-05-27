@@ -505,18 +505,56 @@ grafico_mapa
 # COMPLETEN la siguiente ficha como comentarios. Indiquen las fuentes.
 #
 #   a) Nombre del paquete y autor(es) principales:
-#      _________________________________________________________________________
-#   b) Para que tipo de visualizaciones se utiliza:
-#      _________________________________________________________________________
-#   c) Funcion(es) principal(es) del paquete y que hace cada una:
-#      _________________________________________________________________________
-#   d) Una ventaja y una limitacion frente al paquete base o ggplot2:
-#      Ventaja:    ______________________________________________________________
-#      Limitacion: ______________________________________________________________
-#   e) Fuentes consultadas (al menos dos, con su enlace):
-#      1) _______________________________________________________________________
-#      2) _______________________________________________________________________
+#      Paquete: ggthemes.
+#      Autor principal y mantenedor: Jeffrey B. Arnold.
+#      Tambien cuenta con contribuciones de Gergely Daroczi, Bo Werth,
+#      Brian Weitzner, Joshua Kunst, Baptise Auguie, Bob Rudis,
+#      Hadley Wickham, Justin Talbot y Joshua London.
 #
+#   b) Para que tipo de visualizaciones se utiliza:
+#      Se utiliza para mejorar la apariencia visual de graficos construidos
+#      con ggplot2. El paquete agrega temas, escalas de color, escalas de forma
+#      y algunos elementos graficos adicionales. Es util cuando se desea dar
+#      un estilo mas profesional o especifico a los graficos, por ejemplo con
+#      estilos similares a The Economist, FiveThirtyEight, Excel, Stata,
+#      The Wall Street Journal, entre otros.
+#
+#   c) Funcion(es) principal(es) del paquete y que hace cada una:
+#      theme_economist(): aplica un estilo visual inspirado en graficos de
+#      The Economist.
+#
+#      theme_fivethirtyeight(): aplica un estilo visual inspirado en
+#      graficos de FiveThirtyEight.
+#
+#      theme_wsj(): aplica un estilo visual inspirado en graficos de
+#      The Wall Street Journal.
+#
+#      theme_excel(): aplica un estilo parecido a los graficos generados
+#      en Microsoft Excel.
+#
+#      scale_colour_economist(): modifica la escala de colores del grafico
+#      con una paleta asociada al estilo de The Economist.
+#
+#      scale_color_tableau(): aplica paletas de colores tipo Tableau,
+#      utiles para diferenciar categorias en graficos.
+#
+#   d) Una ventaja y una limitacion frente al paquete base o ggplot2:
+#      Ventaja:
+#      Permite personalizar graficos de ggplot2 de forma rapida, usando temas
+#      y paletas ya preparadas, lo que facilita obtener graficos mas atractivos
+#      sin escribir muchas lineas de configuracion visual.
+#
+#      Limitacion:
+#      Depende de ggplot2, por lo que no reemplaza al paquete base ni a ggplot2.
+#      Ademas, si se desea un estilo completamente personalizado, puede ser
+#      necesario ajustar manualmente elementos adicionales con theme().
+#
+#   e) Fuentes consultadas (al menos dos, con su enlace):
+#      1) CRAN. ggthemes: Extra Themes, Scales and Geoms for 'ggplot2'.
+#         https://cran.r-project.org/web/packages/ggthemes/index.html
+#
+#      2) Sitio oficial de documentacion de ggthemes.
+#         https://jrnold.github.io/ggthemes/
 # ------------------------------------------------------------------------------
 # 4.3  EJEMPLO APLICADO  (8 pts)                   [Responsable: TODO EL GRUPO]
 # ------------------------------------------------------------------------------
