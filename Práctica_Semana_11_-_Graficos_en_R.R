@@ -212,7 +212,16 @@ pie(
   labels = etiquetas_cilindros,
   main = "Distribución de automóviles según número de cilindros"
 )
-
+grafico_dispersion <- ggplot(
+  data = datos_airquality,
+  mapping = aes(x = Temp, y = Ozone)
+) +
+  geom_point() +
+  labs(
+    title = "Relación entre temperatura y ozono",
+    x = "Temperatura",
+    y = "Ozono"
+  )
 # ------------------------------------------------------------------------------
 # Ejercicio 1.6  MULTIPLES GRAFICOS Y EXPORTACION  (5 pts)  [Resp.: Integrante C]
 # ------------------------------------------------------------------------------
@@ -261,10 +270,33 @@ library(ggplot2)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+# Ejercicio 2.2: Mapeo estético
+# Color de los puntos según el mes
+# ------------------------------------------------------------------------------
 
+grafico_dispersion_mes <- ggplot(
+  data = datos_airquality,
+  mapping = aes(
+    x = Temp,
+    y = Ozone,
+    color = factor(Month)
+  )
+) +
+  geom_point(size = 2.5, alpha = 0.8) +
+  labs(
+    title = "Relación entre temperatura y ozono según el mes",
+    x = "Temperatura",
+    y = "Ozono",
+    color = "Mes"
+  )
 
-# Comentario 2.2: ______________________________________________________________
+grafico_dispersion_mes
 
+# Comentario 2.2:
+# Al agregar el color según el mes, el gráfico permite observar si la relación
+# entre temperatura y ozono cambia de acuerdo con el periodo del año. Esta tercera
+# variable facilita identificar patrones estacionales, ya que los puntos quedan
+# agrupados visualmente por mes.
 
 
 # ------------------------------------------------------------------------------
