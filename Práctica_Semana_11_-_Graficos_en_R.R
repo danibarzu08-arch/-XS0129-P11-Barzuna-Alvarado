@@ -409,7 +409,52 @@ library(maps)
 # Pista: San Jose, Costa Rica  ->  long = -84.09, lat = 9.93
 
 # >>> ESCRIBA SU CODIGO AQUI:
+# Ejercicio 3.3: Agregar puntos al mapa
+# Mapa de Costa Rica con coordenadas conocidas
 
+# Se obtiene el mapa de Costa Rica.
+mapa_costa_rica <- map_data("world", region = "Costa Rica")
+
+
+# Se crean las coordenadas de las ciudades.
+# Puede agregar más integrantes añadiendo más filas al data.frame.
+puntos_ciudades <- data.frame(
+  ciudad = c("San José"),
+  longitud = c(-84.09),
+  latitud = c(9.93)
+)
+
+# Mapa con puntos y etiquetas.
+grafico_mapa <- ggplot() +
+  geom_polygon(
+    data = mapa_costa_rica,
+    mapping = aes(x = long, y = lat, group = group),
+    fill = "gray90",
+    color = "gray30"
+  ) +
+  geom_point(
+    data = puntos_ciudades,
+    mapping = aes(x = longitud, y = latitud),
+    color = "red",
+    size = 3
+  ) +
+  geom_text(
+    data = puntos_ciudades,
+    mapping = aes(x = longitud, y = latitud, label = ciudad),
+    vjust = -1,
+    size = 4
+  ) +
+  coord_quickmap() +
+  labs(
+    title = "Mapa de Costa Rica con puntos de referencia",
+    subtitle = "Ubicación de ciudades mediante coordenadas geográficas",
+    x = "Longitud",
+    y = "Latitud",
+    caption = "Fuente: Elaboración propia con ggplot2 y maps"
+  ) +
+  theme_minimal()
+
+grafico_mapa
 
 
 # ==============================================================================
