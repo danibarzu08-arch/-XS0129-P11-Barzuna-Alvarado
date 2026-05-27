@@ -2350,12 +2350,12 @@ ggplot(region, aes(long, lat, group = group)) +
 #
 #   BITACORA DEL GRUPO (responder como comentarios):
 #   a) Cuantas ramas y cuantos pull requests crearon en total:
-#      _________________________________________________________________________
+#      Hicimos 4 ramas (una por integrante y la grupal por ende 4 pull requests
 #   b) Describan brevemente un conflicto de fusion que enfrentaron y como lo
 #      resolvieron (o expliquen como lo evitaron):
-#      _________________________________________________________________________
+#      Nada mas eliminado las flechas y dandole marcar como resuelto al conflictoi
 #   c) Que aprendio el grupo sobre el trabajo colaborativo con Git:
-#      _________________________________________________________________________
+#      Como utilizar git en equipo en diferentes ramas
 #
 # ==============================================================================
 # RUBRICA DE EVALUACION (resumen)
