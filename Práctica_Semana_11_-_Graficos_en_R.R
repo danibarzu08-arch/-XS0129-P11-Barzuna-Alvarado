@@ -139,10 +139,18 @@ summary(mtcars)
 # >>> ESCRIBA SU CODIGO AQUI:
 
 
+hist(airquality$Ozone, breaks = 5,
+     main = "Concentración de Ozono en el aire",
+     xlab = "Nivel Ozono en partes por mil millones",
+     col= "pink" )
 
-# Comentario 1.2: ______________________________________________________________
+hist(airquality$Ozone, breaks = 15,
+     main = "Concentración de Ozono en el aire",
+     xlab = "Nivel Ozono en partes por mil millones",
+     col= "lightgreen" )
 
-
+# Comentario 1.2: Cambia la variabilidad,en el primero podemos ver los datos distrubuidos de forma más general
+# en cambio en el segundo hay más variaciones, lo que lo hace más detallado
 
 # ------------------------------------------------------------------------------
 # Ejercicio 1.3  DIAGRAMA DE CAJAS  (4 pts)        [Responsable: Integrante C]
