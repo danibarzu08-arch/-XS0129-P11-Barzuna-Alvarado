@@ -171,10 +171,17 @@ col = "#cb50e3")
 # airquality$Ozone (eje Y). Use pch = 19 y describa la relacion observada.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+plot(x = airquality$Temp,
+     y = airquality$Ozone,
+     xlab = "Temperatura" ,
+     ylab = "Ozono" ,
+     pch = 19,
+     col = 'royalblue1')
 
 
 
-# Comentario 1.4: ______________________________________________________________
+# Comentario 1.4: La relacion observada es que a medida que la temperatura 
+#aumenta, los niveles de ozono tambien aumentan. 
 
 
 
@@ -226,8 +233,10 @@ library(ggplot2)
 # ahora con ggplot2 y geom_point().
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
-
+ggplot(data = airquality, mapping = aes(x = Temp, y = Ozone)) +
+       geom_point(shape = 19, color = 'royalblue3', size = 2) +
+       labs(x = "Temperatura (°F)",
+            y = "Ozono (ppb)")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 2.2  MAPEO ESTETICO  (4 pts)           [Responsable: Integrante B]
