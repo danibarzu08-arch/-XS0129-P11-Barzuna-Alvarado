@@ -200,8 +200,32 @@ col = "#cb50e3")
 #    versionar imagenes generadas automaticamente.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+#Graficos de lado a lado 
+par(mfrow = c(1,2))
 
+#Hacemos el histograma de temperatura 
+hist(airquality$Temp,
+main = "Histograma de temperatura",
+xlab = "Temperatura",
+col = "purple")
 
+#Ahora un boxplot del viento
+boxplot(airquality$Wind,
+main = "Boxplot de viento",
+ylab = "Velocidad del viento",
+col = "cyan")
+
+#Rstauramos el panel grafico 
+par(mfrow = c(1,1))
+
+#Exportamos el histograma a PNG
+png("grafico_temp.png")
+
+hist(airquality$Temp,
+main = "Temperatura",
+col = "verde")
+
+dev.off()   #Esta parte nos sirve para cerrar el archivo y terminar de guardarlo 
 
 # ==============================================================================
 # PARTE 2 - GRAFICOS CON ggplot2  (20 puntos)
