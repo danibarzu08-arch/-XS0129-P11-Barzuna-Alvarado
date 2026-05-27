@@ -18,9 +18,9 @@
 # ------------------------------------------------------------------------------
 # DATOS DEL GRUPO
 # ------------------------------------------------------------------------------
-# Integrante A: ______________________  Carne: __________  GitHub: ____________
-# Integrante B: ______________________  Carne: __________  GitHub: ____________
-# Integrante C: ______________________  Carne: __________  GitHub: ____________
+# Integrante A: Daniela Barzuna Carne: C5D078  GitHub: danibarzu08
+# Integrante B: Lucía Gonzales  Carne: C5F482  GitHub: Lu Gonzales
+# Integrante C: Moserrath Rivera  Carne: C4I976  GitHub: monse1911
 #               (deje en blanco si el grupo es de dos personas)
 #
 # ------------------------------------------------------------------------------
@@ -95,13 +95,18 @@ data("iris")
 data("ToothGrowth")
 
 # >>> ESCRIBA SU CODIGO AQUI: use str() y summary() sobre airquality y mtcars.
+str(airquality)
+summary(airquality)
+
+str(mtcars)
+summary(mtcars)
 
 
 
 # 0.2  En un comentario, indiquen cuantas observaciones y cuantas variables
 #      tiene 'airquality' y mencionen si contiene valores faltantes (NA).
 #
-# Respuesta 0.2: _______________________________________________________________
+# Respuesta 0.2: Son 153 observaciones y 6 variables. Tiene 37 valores faltantes en Ozone y 7 en Solar R
 
 
 
