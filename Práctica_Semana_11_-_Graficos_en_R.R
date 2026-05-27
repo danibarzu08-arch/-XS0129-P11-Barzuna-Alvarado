@@ -282,7 +282,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Species)) +
   labs(title = "Sepal.Length por Especie",
        y = "Especie",
        x = "sepal.lenght")
-
+ 
 
 
 # ------------------------------------------------------------------------------
@@ -325,7 +325,10 @@ library(maps)
 #       geom_polygon(...) + coord_quickmap()
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+region <- map_data("world", region = "Costa Rica")
+ggplot(region, aes(long, lat, group = group)) +
+  geom_polygon(color = "black", fill = "darkseagreen") + coord_quickmap() +
+  labs(title = "Mapa de Costa Rica")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.3  AGREGAR PUNTOS AL MAPA  (5 pts)   [Responsable: Integrante B]
