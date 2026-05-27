@@ -328,7 +328,44 @@ grafico_dispersion_mes
 # personalizar colores; y un theme_*() distinto al predeterminado.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+# Ejercicio 2.5: Personalización completa
+# Se elige el gráfico del Ejercicio 2.2
 
+grafico_personalizado <- ggplot(
+  data = datos_airquality,
+  mapping = aes(
+    x = Temp,
+    y = Ozone,
+    color = factor(Month)
+  )
+) +
+  geom_point(size = 3, alpha = 0.85) +
+  labs(
+    title = "Variación del ozono según la temperatura",
+    subtitle = "Análisis de la base de datos airquality por mes",
+    x = "Temperatura registrada",
+    y = "Concentración de ozono",
+    color = "Mes",
+    caption = "Fuente: Dataset airquality incluido en R"
+  ) +
+  scale_color_manual(
+    values = c(
+      "5" = "#1B9E77",
+      "6" = "#D95F02",
+      "7" = "#7570B3",
+      "8" = "#E7298A",
+      "9" = "#66A61E"
+    )
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 11),
+    axis.title = element_text(size = 11),
+    legend.title = element_text(face = "bold")
+  )
+
+grafico_personalizado
 
 
 # ==============================================================================
