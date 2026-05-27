@@ -238,6 +238,11 @@ library(ggplot2)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+ggplot(data = airquality, mapping = aes(x = Temp, y = Ozone)) +
+  geom_point(shape = 19, color = 'royalblue3', size = 2) +
+  labs(x = "Temperatura (°F)",
+       y = "Ozono (ppb)")
+
 
 # ------------------------------------------------------------------------------
 # Ejercicio 2.2  MAPEO ESTETICO  (4 pts)           [Responsable: Integrante B]
