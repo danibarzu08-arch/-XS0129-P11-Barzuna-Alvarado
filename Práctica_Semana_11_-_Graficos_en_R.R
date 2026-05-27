@@ -176,7 +176,12 @@ col = "#cb50e3")
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
-
+plot(x = airquality$Temp,
+     y = airquality$Ozone,
+     xlab = "Temperatura" ,
+     ylab = "Ozono" ,
+     pch = 19,
+     col = 'royalblue1')
 
 
 # Comentario 1.4: La relacion observada es que a medida que la temperatura 
