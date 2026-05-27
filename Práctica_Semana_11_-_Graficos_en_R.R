@@ -315,8 +315,18 @@ library(maps)
 # Pista: map("world", regions = "Costa Rica", fill = TRUE, col = "lightgreen").
 
 # >>> ESCRIBA SU CODIGO AQUI:
+install.packages("maps")
+library(maps)
+#Primero dibujamos el mapa del mundo 
+map(dataset = "world",
+main = "Mapa del mundo")
 
-
+#Ahora vamos a dibujar un mapa a eleccion, en este caso Japon 
+map("world",
+regions = "Japan",
+fill = TRUE,
+col = "red",
+main = "Mapa de Japon")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.2  MAPA POLIGONAL CON ggplot2  (5 pts)  [Resp.: Integrante A]
