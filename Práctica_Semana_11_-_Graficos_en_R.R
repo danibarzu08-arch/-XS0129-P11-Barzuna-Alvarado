@@ -357,10 +357,9 @@ library(maps)
 #     - wordcloud     : nubes de palabras.
 #     - lattice       : sistema de graficos alternativo (graficos en celosia).
 #
-# Libreria elegida: ____________________________________________________________
+# Libreria elegida: ggthemes
 # Justifiquen en una o dos lineas por que la eligieron:
-#   ___________________________________________________________________________
-#
+# La elegimos porque nos parecio muy linda la forma en que nos permite personalizar la apariencia de los graficos de manera visualmente atractiva.
 # ------------------------------------------------------------------------------
 # 4.2  FICHA DE DOCUMENTACION  (6 pts)             [Responsable: Integrante B]
 # ------------------------------------------------------------------------------
@@ -392,12 +391,23 @@ library(maps)
 # en una rama compartida (por ejemplo 'feature/parte4') y resuelvan en conjunto
 # cualquier conflicto de fusion que aparezca.
 
-# install.packages("__________")   # escriba aqui el nombre de su libreria
-# library(__________)
-
+# install.packages("ggthemes")   # escriba aqui el nombre de su libreria
+# library(ggthemes)
+library(ggplot2)
+install.packages("ggthemes")
+library(ggthemes)
 # >>> ESCRIBA SU CODIGO AQUI:
-
-
+#Creamos un grafico con ggplot2
+ggplot(airquality,
+aes(x = Temp,
+y = Ozone,
+color = factor(Month))) +
+geom_point(size = 3) +  #Size es para el tamaño de los puntos del grafico 
+labs(title = "Temperatura y Ozono",
+x = "Temperatura",
+y = "Ozono") +
+theme_economist()
+#La parte final es donde entra el tema de ggthemes, le da detalles para que se parezca a los graficos de la revista ¨The Economist¨.
 
 # ------------------------------------------------------------------------------
 # 4.4  COMPARACION Y REFLEXION  (4 pts)            [Responsable: Integrante C]
