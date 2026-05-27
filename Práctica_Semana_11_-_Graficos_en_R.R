@@ -126,7 +126,11 @@ summary(mtcars)
 # Asignele un titulo, una etiqueta de eje y un color de su eleccion.
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+barplot(airquality$Wind,
+        main = "Velocidades del viento",
+        ylab = "Dias",
+        horiz = FALSE,
+        col = 'pink')
 
 
 # ------------------------------------------------------------------------------
@@ -152,10 +156,15 @@ summary(mtcars)
 # Interprete: en que mes se observa la mayor temperatura mediana.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+boxplot(Temp ~Month,
+data = airquality,
+main = "Temperatura por mes",
+xalb = "Mes",
+ylab = "temperatura",
+col = "#cb50e3")
 
 
-
-# Comentario 1.3: ______________________________________________________________
+# Comentario 1.3: La mayor temperatura se observa en el mes 8.
 
 
 
@@ -167,9 +176,16 @@ summary(mtcars)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+plot(x = airquality$Temp,
+     y = airquality$Ozone,
+     xlab = "Temperatura" ,
+     ylab = "Ozono" ,
+     pch = 19,
+     col = 'royalblue1')
 
 
-# Comentario 1.4: ______________________________________________________________
+# Comentario 1.4: La relacion observada es que a medida que la temperatura 
+#aumenta, los niveles de ozono tambien aumentan. 
 
 
 
@@ -222,6 +238,10 @@ library(ggplot2)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+ggplot(data = airquality, mapping = aes(x = Temp, y = Ozone)) +
+  geom_point(shape = 19, color = 'royalblue3', size = 2) +
+  labs(x = "Temperatura (°F)",
+       y = "Ozono (ppb)")
 
 
 # ------------------------------------------------------------------------------
@@ -257,7 +277,12 @@ library(ggplot2)
 # de Sepal.Length por especie (Species). Use stat = "summary", fun = "mean".
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Species)) +
+  geom_bar(stat = "summary", fun = "mean", fill = 'turquoise3') +
+  labs(title = "Sepal.Length por Especie",
+       y = "Especie",
+       x = "sepal.lenght")
+ 
 
 
 # ------------------------------------------------------------------------------
@@ -300,8 +325,10 @@ library(maps)
 #       geom_polygon(...) + coord_quickmap()
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
-
+region <- map_data("world", region = "Costa Rica")
+ggplot(region, aes(long, lat, group = group)) +
+  geom_polygon(color = "black", fill = "darkseagreen") + coord_quickmap() +
+  labs(title = "Mapa de Costa Rica")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.3  AGREGAR PUNTOS AL MAPA  (5 pts)   [Responsable: Integrante B]
