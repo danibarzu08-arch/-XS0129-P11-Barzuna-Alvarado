@@ -196,7 +196,22 @@ col = "#cb50e3")
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+conteo_cilindros <- table(mtcars$cyl)
 
+porcentaje_cilindros <- round(prop.table(conteo_cilindros) * 100, 1)
+etiquetas_cilindros <- paste0(
+  names(conteo_cilindros),
+  " cilindros\n",
+  porcentaje_cilindros,
+  "%"
+)
+
+# Gráfico de pie.
+pie(
+  conteo_cilindros,
+  labels = etiquetas_cilindros,
+  main = "Distribución de automóviles según número de cilindros"
+)
 
 # ------------------------------------------------------------------------------
 # Ejercicio 1.6  MULTIPLES GRAFICOS Y EXPORTACION  (5 pts)  [Resp.: Integrante C]
