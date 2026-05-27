@@ -276,7 +276,16 @@ library(ggplot2)
 #   - un facet_wrap(~ Month) para separar un panel por mes.
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+ggplot(airquality,
+aes(x = Temp,
+y = Ozone,
+color = factor(Month))) +
+geom_point() +
+geom_smooth(method = "lm") +  #Esto nos agrega una linea de regresion lineal 
+facet_wrap(~ Month) + #Esto nos permite separar el grafico un panel por mes 
+labs(title = "Relacion entre temperatura y ozono por mes",
+x = "Temperatura",
+y = "Ozono")
 
 
 # ------------------------------------------------------------------------------
